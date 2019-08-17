@@ -2,8 +2,10 @@ const inquirer = require('inquirer');
 
 function Adrep() {
     let exited = false;
+
+    this.exit = () => Promise.resolve(exited = true);
     const commandMap = {
-        exit: () => Promise.resolve(exited = true)
+        exit: this.exit
     };
 
     this.setCommand = function(name = '', f = function(){}) {
@@ -11,6 +13,8 @@ function Adrep() {
             throw new Error('No Adrep command name specified.');
         } else if (typeof name !== 'string') {
             throw new Error(`Adrep command name must be a string; ${typeof name} supplied instead.`);
+        } else if (name === 'exit') {
+            throw new Error('You cannot overwrite the default Adrep exit command.');
         } else if (typeof f !== 'function') {
             throw new Error(`Adrep command callback must be a function; ${typeof f} supplied instead.`);
         } else {
