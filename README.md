@@ -79,7 +79,7 @@ What would you like me to do? greet Roger "hi, neighbors!"
 /* Error object is:
 {
     type: Adrep.ERROR_CODES.ERR_COMMAND_FAILED,
-    toString: (command, reason) => ..., // Ultimately: 'Command greet failed with reason: Go home, Roger!
+    toString: (command, reason) => ..., // Ultimately: 'Command greet failed with reason: Go home, Roger!'
     value: ['Go home, Roger!', 'greet', 'Roger', 'hi, neighbors!']
 }
 */
