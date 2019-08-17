@@ -1,0 +1,30 @@
+{
+  "name": "adrep",
+  "version": "1.0.0",
+  "description": "Async Dictionary REPL (Adrep) lets you create a mini REPL with custom commands asynchronously.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IceMetalPunk/Adrep.git"
+  },
+  "keywords": [
+    "async",
+    "asynchronous",
+    "repl",
+    "custom",
+    "inquirer",
+    "prompt"
+  ],
+  "author": "IceMetalPunk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IceMetalPunk/Adrep/issues"
+  },
+  "homepage": "https://github.com/IceMetalPunk/Adrep#readme",
+  "dependencies": {
+    "inquirer": "^6.5.1"
+  }
+}
