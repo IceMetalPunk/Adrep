@@ -64,22 +64,22 @@ What would you like me to do?
 {
     type: Adrep.ERROR_CODES.ERR_NO_COMMAND,
     toString: () => ...,
-    value: (Same as result of toString())
+    value: 'No command specified'
 }
 */
-What would you like me to do? nothing at all
+What would you like me to do? absolutely nothing at all
 /* Error object is:
 {
     type: Adrep.ERROR_CODES.ERR_UNKNOWN_COMMAND,
-    toString: () => ...,
-    value: (Same as result of toString())
+    toString: (command) => ...,
+    value: 'Unknown command absolutely'
 }
 */
 What would you like me to do? greet Roger "hi, neighbors!"
 /* Error object is:
 {
     type: Adrep.ERROR_CODES.ERR_COMMAND_FAILED,
-    toString: () => ...,
+    toString: (command, reason) => ..., // Ultimately: 'Command greet failed with reason: Go home, Roger!
     value: ['Go home, Roger!', 'greet', 'Roger', 'hi, neighbors!']
 }
 */
